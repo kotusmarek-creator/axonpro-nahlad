@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <!-- card graphic: Java. Content in 0..640; background extends to -400..1040 for the wide variant -->
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- outer decor for wide variant -->
+  <circle cx="-190" cy="84" r="40" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="-70" cy="226" r="5" fill="#7CC6DC" opacity=".7"/>
+  <circle cx="-270" cy="210" r="4" fill="#1590B5" opacity=".4"/>
+  <circle cx="790" cy="214" r="46" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="700" cy="70" r="5" fill="#2FBFAE" opacity=".5"/>
+  <circle cx="900" cy="96" r="4" fill="#7CC6DC" opacity=".7"/>
+  <!-- soft background shapes -->
+  <circle cx="318" cy="150" r="126" fill="#DDEFF6"/>
+  <circle cx="512" cy="200" r="30" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="124" cy="96" r="20" fill="#D9EEF5" opacity=".8"/>
+
+  <!-- saucer -->
+  <g filter="url(#sh)"><rect x="196" y="226" width="218" height="20" rx="10" fill="#fff"/></g>
+  <rect x="246" y="246" width="118" height="7" rx="3.5" fill="#D9EEF5"/>
+  <!-- mug -->
+  <g filter="url(#sh)">
+    <path d="M365 142h10a30 30 0 0 1 0 60h-12" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/>
+    <path d="M245 126a8 8 0 0 1 8-8h104a8 8 0 0 1 8 8v72a34 34 0 0 1-34 34h-52a34 34 0 0 1-34-34z" fill="#fff"/>
+  </g>
+  <rect x="245" y="118" width="120" height="12" rx="6" fill="#F0F6F9"/>
+  <g stroke-linecap="round" stroke-width="9">
+    <path d="M270 160h30" stroke="#007194"/><path d="M312 160h28" stroke="#7CC6DC"/>
+    <path d="M282 182h46" stroke="#2FBFAE"/>
+    <path d="M276 204h18" stroke="#D9EEF5"/><path d="M306 204h28" stroke="#1590B5"/>
+  </g>
+  <!-- steam made of code bars -->
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="18 9">
+    <path d="M280 106c-10-9 10-16 0-24c-10-9 10-15 0-22" stroke="#7CC6DC"/>
+    <path d="M305 108c-12-10 12-18 0-28c-12-10 12-18 0-28" stroke="#1590B5"/>
+    <path d="M330 106c-10-9 10-16 0-24c-10-9 10-15 0-22" stroke="#7CC6DC"/>
+  </g>
+
+  <!-- curly braces tile -->
+  <g filter="url(#sh)"><rect x="140" y="142" width="68" height="68" rx="18" fill="#fff"/></g>
+  <g fill="none" stroke="#1590B5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M166 158c-5 0-8 2-8 7v5c0 4-2 6-6 6c4 0 6 2 6 6v5c0 5 3 7 8 7"/>
+    <path d="M182 158c5 0 8 2 8 7v5c0 4 2 6 6 6c-4 0-6 2-6 6v5c0 5-3 7-8 7"/>
+  </g>
+
+  <!-- enterprise stack badge -->
+  <g filter="url(#sh)"><rect x="428" y="62" width="66" height="66" rx="16" fill="#fff"/></g>
+  <rect x="443" y="76" width="36" height="10" rx="5" fill="#007194"/>
+  <rect x="443" y="90" width="36" height="10" rx="5" fill="#1590B5"/>
+  <rect x="443" y="104" width="36" height="10" rx="5" fill="#7CC6DC"/>
+  <g fill="#fff"><circle cx="472" cy="81" r="2.2"/><circle cx="472" cy="95" r="2.2"/><circle cx="472" cy="109" r="2.2"/></g>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="196" cy="98" r="4"/><circle cx="452" cy="170" r="3"/><circle cx="466" cy="238" r="4" fill="#2FBFAE"/>
+    <path d="M228 60l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>

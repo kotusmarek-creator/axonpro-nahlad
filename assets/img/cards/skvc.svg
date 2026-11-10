@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <!-- card graphic: Slovakia in Numbers (open public data analytics). Background extends to -400..1040 for the wide variant -->
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- soft outer shapes (wide variant) -->
+  <circle cx="-196" cy="100" r="42" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="-84" cy="232" r="6" fill="#7CC6DC" opacity=".45"/>
+  <circle cx="-268" cy="226" r="3" fill="#7CC6DC" opacity=".5"/>
+  <circle cx="776" cy="204" r="44" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="866" cy="72" r="5" fill="#7CC6DC" opacity=".45"/>
+  <circle cx="694" cy="96" r="3" fill="#7CC6DC" opacity=".5"/>
+  <!-- soft background shapes -->
+  <circle cx="320" cy="150" r="126" fill="#DDEFF6"/>
+  <circle cx="530" cy="96" r="30" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="126" cy="240" r="22" fill="#D9EEF5" opacity=".8"/>
+
+  <!-- dashboard card -->
+  <g filter="url(#sh)"><rect x="190" y="58" width="260" height="184" rx="16" fill="#fff"/></g>
+  <rect x="210" y="78" width="56" height="8" rx="4" fill="#007194"/>
+  <rect x="274" y="78" width="34" height="8" rx="4" fill="#D9EEF5"/>
+  <rect x="212" y="182" width="16" height="34" rx="5" fill="#7CC6DC"/>
+  <rect x="236" y="164" width="16" height="52" rx="5" fill="#7CC6DC"/>
+  <rect x="260" y="146" width="16" height="70" rx="5" fill="#1590B5"/>
+  <rect x="284" y="124" width="16" height="92" rx="5" fill="#1590B5"/>
+  <rect x="308" y="104" width="16" height="112" rx="5" fill="#007194"/>
+  <path d="M208 224h120" stroke="#D9EEF5" stroke-width="3" stroke-linecap="round"/>
+  <!-- donut -->
+  <circle cx="384" cy="138" r="32" fill="none" stroke="#D9EEF5" stroke-width="14"/>
+  <circle cx="384" cy="138" r="32" fill="none" stroke="#2FBFAE" stroke-width="14" stroke-dasharray="110.6 201.1" transform="rotate(-90 384 138)"/>
+  <circle cx="384" cy="138" r="32" fill="none" stroke="#1590B5" stroke-width="14" stroke-dasharray="50.3 201.1" stroke-dashoffset="-110.6" transform="rotate(-90 384 138)"/>
+  <circle cx="358" cy="204" r="4" fill="#2FBFAE"/>
+  <path d="M368 204h30" stroke="#D9EEF5" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="358" cy="220" r="4" fill="#1590B5"/>
+  <path d="M368 220h20" stroke="#D9EEF5" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- trend badge -->
+  <g filter="url(#sh)"><rect x="148" y="92" width="60" height="44" rx="14" fill="#fff"/></g>
+  <path d="M162 124l10-10 6 6 14-14M184 106h8v8" fill="none" stroke="#2FBFAE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- magnifier badge -->
+  <g filter="url(#sh)"><rect x="420" y="186" width="72" height="72" rx="20" fill="#fff"/></g>
+  <circle cx="451" cy="217" r="13" fill="#F0F6F9" stroke="#1590B5" stroke-width="5"/>
+  <path d="M461 227l10 10" stroke="#007194" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="168" cy="190" r="4"/><circle cx="494" cy="150" r="3"/><circle cx="246" cy="262" r="3.5" fill="#2FBFAE"/>
+    <path d="M482 62l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>

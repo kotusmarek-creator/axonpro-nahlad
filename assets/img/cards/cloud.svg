@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <!-- card graphic: Cloud, virtualization, Kubernetes. Content in 0..640; background extends to -400..1040 for the wide variant -->
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- outer decor (wide variant) -->
+  <circle cx="-220" cy="210" r="44" fill="#D9EEF5" opacity=".5"/>
+  <circle cx="-80" cy="70" r="20" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="-150" cy="130" r="4" fill="#7CC6DC" opacity=".7"/>
+  <circle cx="800" cy="90" r="42" fill="#D9EEF5" opacity=".5"/>
+  <circle cx="900" cy="230" r="18" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="730" cy="210" r="4" fill="#7CC6DC" opacity=".7"/>
+  <!-- soft background shapes -->
+  <circle cx="320" cy="150" r="126" fill="#DDEFF6"/>
+  <circle cx="126" cy="80" r="26" fill="#D9EEF5" opacity=".8"/>
+  <circle cx="518" cy="226" r="24" fill="#D9EEF5" opacity=".8"/>
+
+  <!-- connectors -->
+  <path d="M268 160v38M372 160v38" stroke="#7CC6DC" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="268" cy="184" r="5" fill="#1590B5"/>
+  <circle cx="372" cy="184" r="5" fill="#1590B5"/>
+
+  <!-- cloud -->
+  <g filter="url(#sh)" fill="#fff">
+    <rect x="206" y="104" width="228" height="66" rx="33"/>
+    <circle cx="272" cy="106" r="40"/>
+    <circle cx="338" cy="92" r="52"/>
+    <circle cx="398" cy="118" r="32"/>
+  </g>
+  <circle cx="318" cy="120" r="22" fill="#1590B5"/>
+  <path d="M318 132v-22M309 118l9-9 9 9" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M354 114h34M354 128h22" stroke="#D9EEF5" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- left server stack -->
+  <g filter="url(#sh)" fill="#fff">
+    <rect x="226" y="198" width="84" height="28" rx="9"/>
+    <rect x="226" y="232" width="84" height="28" rx="9"/>
+  </g>
+  <circle cx="242" cy="212" r="4.5" fill="#2FBFAE"/><circle cx="242" cy="246" r="4.5" fill="#2FBFAE"/>
+  <path d="M256 212h40M256 246h28" stroke-width="6" stroke-linecap="round" stroke="#D9EEF5"/>
+
+  <!-- right container stack -->
+  <g filter="url(#sh)" fill="#fff">
+    <rect x="330" y="198" width="84" height="28" rx="9"/>
+    <rect x="330" y="232" width="84" height="28" rx="9"/>
+  </g>
+  <g stroke-width="5" stroke-linecap="round">
+    <path d="M346 206v12M358 206v12M370 206v12" stroke="#1590B5"/>
+    <path d="M346 240v12M358 240v12" stroke="#007194"/><path d="M370 240v12" stroke="#7CC6DC"/>
+  </g>
+  <circle cx="398" cy="212" r="4.5" fill="#7CC6DC"/><circle cx="398" cy="246" r="4.5" fill="#2FBFAE"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="178" cy="150" r="4"/><circle cx="470" cy="70" r="3"/><circle cx="196" cy="236" r="3" fill="#2FBFAE"/>
+    <path d="M466 168l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>

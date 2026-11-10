@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <!-- card graphic: Vývoj softvéru. Content in 0..640; background extends to -400..1040 for the wide variant -->
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- soft background shapes -->
+  <circle cx="330" cy="150" r="128" fill="#DDEFF6"/>
+  <circle cx="520" cy="62" r="34" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="118" cy="236" r="22" fill="#D9EEF5" opacity=".8"/>
+
+  <!-- code window -->
+  <g filter="url(#sh)">
+    <rect x="196" y="62" width="260" height="176" rx="16" fill="#fff"/>
+  </g>
+  <path d="M196 78a16 16 0 0 1 16-16h228a16 16 0 0 1 16 16v14H196z" fill="#F0F6F9"/>
+  <circle cx="216" cy="77" r="4.5" fill="#F5B041"/>
+  <circle cx="231" cy="77" r="4.5" fill="#7CC6DC"/>
+  <circle cx="246" cy="77" r="4.5" fill="#2FBFAE"/>
+  <g stroke-linecap="round" stroke-width="9">
+    <path d="M220 116h52" stroke="#007194"/><path d="M284 116h72" stroke="#7CC6DC"/>
+    <path d="M240 138h44" stroke="#1590B5"/><path d="M296 138h96" stroke="#D9EEF5"/>
+    <path d="M240 160h88" stroke="#2FBFAE"/><path d="M340 160h34" stroke="#7CC6DC"/>
+    <path d="M260 182h60" stroke="#1590B5"/><path d="M332 182h48" stroke="#D9EEF5"/>
+    <path d="M220 204h40" stroke="#007194"/>
+  </g>
+  <rect x="272" y="198" width="4" height="13" rx="2" fill="#007194"/>
+
+  <!-- gear -->
+  <g transform="translate(456 92) rotate(12)">
+    <path d="M22.4 -5.0L29.7 -3.9L29.7 3.9L22.4 5.0L19.4 12.3L23.8 18.3L18.3 23.8L12.3 19.4L5.0 22.4L3.9 29.7L-3.9 29.7L-5.0 22.4L-12.3 19.4L-18.3 23.8L-23.8 18.3L-19.4 12.3L-22.4 5.0L-29.7 3.9L-29.7 -3.9L-22.4 -5.0L-19.4 -12.3L-23.8 -18.3L-18.3 -23.8L-12.3 -19.4L-5.0 -22.4L-3.9 -29.7L3.9 -29.7L5.0 -22.4L12.3 -19.4L18.3 -23.8L23.8 -18.3L19.4 -12.3Z" fill="#007194"/>
+    <circle r="16" fill="#007194"/>
+    <circle r="9" fill="#fff"/>
+  </g>
+
+  <!-- check bubble -->
+  <g filter="url(#sh)">
+    <path d="M398 196h76a14 14 0 0 1 14 14v26a14 14 0 0 1-14 14h-50l-14 12v-12h-12a14 14 0 0 1-14-14v-26a14 14 0 0 1 14-14z" fill="#fff"/>
+  </g>
+  <circle cx="414" cy="223" r="11" fill="#2FBFAE"/>
+  <path d="M409 223l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M434 217h38M434 229h26" stroke="#D9EEF5" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- code brackets badge -->
+  <g filter="url(#sh)"><rect x="148" y="150" width="68" height="68" rx="18" fill="#fff"/></g>
+  <path d="M172 172l-10 12 10 12M192 172l10 12-10 12" fill="none" stroke="#1590B5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="170" cy="96" r="4"/><circle cx="500" cy="168" r="3"/><circle cx="560" cy="236" r="4" fill="#2FBFAE"/>
+    <path d="M540 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>

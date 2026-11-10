@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <!-- card graphic: Hardware supply. Content in 0..640; background extends to -400..1040 for the wide variant -->
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- outer decor (wide variant) -->
+  <circle cx="-200" cy="90" r="44" fill="#D9EEF5" opacity=".5"/>
+  <circle cx="-70" cy="220" r="20" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="-270" cy="230" r="4" fill="#7CC6DC" opacity=".7"/>
+  <circle cx="790" cy="210" r="44" fill="#D9EEF5" opacity=".5"/>
+  <circle cx="890" cy="76" r="20" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="710" cy="96" r="4" fill="#7CC6DC" opacity=".7"/>
+  <!-- soft background shapes -->
+  <circle cx="324" cy="150" r="126" fill="#DDEFF6"/>
+  <circle cx="512" cy="64" r="30" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="124" cy="110" r="20" fill="#D9EEF5" opacity=".8"/>
+
+  <!-- monitor -->
+  <g filter="url(#sh)" fill="#fff">
+    <rect x="292" y="190" width="28" height="36" rx="4"/>
+    <rect x="262" y="220" width="88" height="14" rx="7"/>
+    <rect x="200" y="62" width="212" height="136" rx="16"/>
+  </g>
+  <rect x="214" y="76" width="184" height="104" rx="8" fill="#F0F6F9"/>
+  <rect x="228" y="90" width="72" height="50" rx="7" fill="#7CC6DC"/>
+  <path d="M236 132l16-18 12 12 8-7 20 13z" fill="#fff" opacity=".85"/>
+  <circle cx="284" cy="102" r="5" fill="#fff"/>
+  <g stroke-linecap="round" stroke-width="8">
+    <path d="M314 98h68" stroke="#1590B5"/><path d="M314 116h52" stroke="#D9EEF5"/>
+    <path d="M314 134h60" stroke="#D9EEF5"/>
+    <path d="M232 160h44" stroke="#2FBFAE"/><path d="M288 160h70" stroke="#D9EEF5"/>
+  </g>
+  <circle cx="306" cy="189" r="3" fill="#D9EEF5"/>
+
+  <!-- desktop tower -->
+  <g filter="url(#sh)"><rect x="426" y="104" width="62" height="130" rx="12" fill="#fff"/></g>
+  <rect x="438" y="118" width="38" height="9" rx="4.5" fill="#D9EEF5"/>
+  <rect x="438" y="134" width="38" height="9" rx="4.5" fill="#D9EEF5"/>
+  <g fill="#7CC6DC"><circle cx="445" cy="170" r="2.5"/><circle cx="457" cy="170" r="2.5"/><circle cx="469" cy="170" r="2.5"/><circle cx="445" cy="181" r="2.5"/><circle cx="457" cy="181" r="2.5"/><circle cx="469" cy="181" r="2.5"/></g>
+  <circle cx="457" cy="212" r="8" fill="#007194"/>
+  <circle cx="457" cy="212" r="3" fill="#2FBFAE"/>
+
+  <!-- delivery box badge -->
+  <g filter="url(#sh)"><rect x="140" y="170" width="78" height="78" rx="20" fill="#fff"/></g>
+  <path d="M158 204l-8-12h26l6 12z" fill="#1590B5"/>
+  <path d="M200 204l8-12h-26l-6 12z" fill="#007194"/>
+  <rect x="158" y="202" width="42" height="32" rx="4" fill="#7CC6DC"/>
+  <rect x="166" y="210" width="16" height="8" rx="2" fill="#F0F6F9"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="176" cy="140" r="4"/><circle cx="510" cy="150" r="3"/><circle cx="520" cy="236" r="4" fill="#2FBFAE"/>
+    <path d="M454 64l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>

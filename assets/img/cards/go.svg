@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+    <path id="hx" d="M0-22L19-11V11L0 22L-19 11V-11Z"/>
+  </defs>
+  <!-- card graphic: Go. Content in 0..640; background extends to -400..1040 for the wide variant -->
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- outer decor for wide variant -->
+  <circle cx="-180" cy="210" r="44" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="-60" cy="78" r="5" fill="#7CC6DC" opacity=".7"/>
+  <circle cx="-280" cy="96" r="4" fill="#2FBFAE" opacity=".45"/>
+  <circle cx="800" cy="86" r="40" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="690" cy="232" r="5" fill="#1590B5" opacity=".4"/>
+  <circle cx="910" cy="200" r="4" fill="#7CC6DC" opacity=".7"/>
+  <!-- soft background shapes -->
+  <circle cx="320" cy="150" r="126" fill="#DDEFF6"/>
+  <circle cx="132" cy="226" r="22" fill="#D9EEF5" opacity=".8"/>
+  <circle cx="514" cy="58" r="28" fill="#D9EEF5" opacity=".7"/>
+
+  <!-- speed lines -->
+  <g stroke-linecap="round" stroke-width="9">
+    <path d="M180 116h48" stroke="#7CC6DC"/>
+    <path d="M150 142h78" stroke="#1590B5"/>
+    <path d="M192 168h36" stroke="#2FBFAE"/>
+    <path d="M166 194h62" stroke="#D9EEF5"/>
+  </g>
+
+  <!-- connections between nodes -->
+  <path d="M390 128L436 98L490 148L440 204L390 176" fill="none" stroke="#7CC6DC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- bolt tile -->
+  <g filter="url(#sh)"><rect x="250" y="80" width="140" height="140" rx="32" fill="#fff"/></g>
+  <circle cx="320" cy="150" r="52" fill="#F0F6F9"/>
+  <path d="M318 96H352L332 136H360L296 206L312 162H284Z" fill="#007194" stroke="#007194" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- microservice nodes -->
+  <g filter="url(#sh)" fill="#fff" stroke="#fff" stroke-width="6" stroke-linejoin="round">
+    <use href="#hx" x="436" y="98"/><use href="#hx" x="490" y="148"/><use href="#hx" x="440" y="204"/>
+  </g>
+  <circle cx="436" cy="98" r="8" fill="#2FBFAE"/>
+  <circle cx="490" cy="148" r="8" fill="#1590B5"/>
+  <circle cx="440" cy="204" r="8" fill="#007194"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="214" cy="80" r="4"/><circle cx="514" cy="222" r="3"/><circle cx="372" cy="250" r="4" fill="#2FBFAE"/>
+    <path d="M206 222l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>
