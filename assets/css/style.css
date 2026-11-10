@@ -862,10 +862,8 @@ address { font-style: normal; }
 .pillar:hover::after, .pillar:focus-within::after { opacity: 1; }
 .pillar__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #04101a; }
 .pillar__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-.pillar--security .pillar__media img { object-position: 50% 35%; }
 .pillar:hover .pillar__media img { transform: scale(1.03); }
 .pillar__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6, 20, 32, 0) 55%, rgba(6, 20, 32, .85) 100%); }
-.pillar--security .pillar__media::after { background: linear-gradient(180deg, rgba(6, 20, 32, .1) 0%, rgba(6, 20, 32, .25) 50%, rgba(6, 20, 32, .9) 100%), linear-gradient(90deg, rgba(0, 113, 148, .35), transparent 60%); }
 .pillar__body { position: relative; display: flex; flex-direction: column; gap: 14px; flex: 1; padding: 0 clamp(22px, 2.6vw, 36px) clamp(24px, 2.6vw, 36px); margin-top: -36px; }
 .pillar__top { display: flex; align-items: center; justify-content: space-between; }
 .pillar__icon {
@@ -1116,4 +1114,46 @@ address { font-style: normal; }
 }
 @media (min-width: 901px) and (max-width: 1240px) {
   .pillar--services .tile { min-height: 112px; gap: 12px; }
+}
+/* themed hero illustrations (services panel pages) */
+.lead-figure--art { background: #030b17; }
+.lead-figure--art::after { display: none; }
+/* ==========================================================================
+   Mobile & tablet polish
+   ========================================================================== */
+/* long e-mail addresses never push the page wider than the screen */
+.contact-list div, .branch p, .footer-contacts, .info-card { overflow-wrap: anywhere; min-width: 0; }
+/* touch targets ≥ 40px tall on phones and tablets */
+@media (max-width: 1240px) {
+  .contact-list a.strong, .branch p a, .footer-contacts a, .footer-bottom__links a { display: inline-block; padding-block: 9px; }
+  .branch p { line-height: 1.5; }
+  .footer-col h2 a { display: inline-block; padding-block: 9px; }
+  .lang a { min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; }
+  .brand { padding-block: 6px; }
+}
+@media (max-width: 1240px) {
+  .footer-col ul { gap: 2px; }
+  .footer-col ul a { display: inline-block; padding-block: 10px; }
+  .footer-col h2 a { padding-block: 12px; }
+  .breadcrumb a { display: inline-block; padding-block: 10px; }
+  .side-card--cta li a { display: inline-block; padding-block: 10px; }
+  .toc a { padding-block: 10px; }
+}
+/* phones: card grids become swipeable rows (next card peeks in) – much shorter pages */
+@media (max-width: 640px) {
+  .bento.bento--rail {
+    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84%;
+    gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    margin-inline: calc(-1 * var(--gutter)); padding: 4px var(--gutter) 14px; scroll-padding-inline: var(--gutter);
+    scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .bento.bento--rail::-webkit-scrollbar { display: none; }
+  .bento.bento--rail > * { grid-column: auto !important; grid-row: auto !important; scroll-snap-align: start; min-width: 0; }
+  .bento.bento--rail .card--wide .card__media--strip { height: 120px; }
+}
+/* phones: tighter pillar panels */
+@media (max-width: 640px) {
+  .pillar__lead { font-size: 1rem; }
+  .pillar__points { gap: 6px; }
+  .pillar__points li { font-size: .92rem; }
 }
