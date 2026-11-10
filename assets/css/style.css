@@ -1402,13 +1402,15 @@ address { font-style: normal; }
 }
 
 /* ---- home cards: page illustrations instead of stock photos ---- */
-.card__media--art { aspect-ratio: 2 / 1; background: #030b17; }
+.card__media--art { aspect-ratio: 2 / 1; background: #EEF7FA; }
 .card__media--art.card__media--strip { aspect-ratio: auto; height: clamp(130px, 13vw, 180px); }
 .card__media--art img { object-position: 50% 50%; }
-.card__side--art { background: #030b17; }
+.card__side--art { background: #EEF7FA; }
 .card__side--art img { object-position: 50% 50%; }
 .card--split .card__side--art::after { display: none; }
 .card--project .card__media--art { margin-bottom: 0; }
 .card--project .card__media--art + .card__top { margin-top: -38px; position: relative; z-index: 2; padding-right: 2px; }
 .card--project .card__media--art + .card__top .card__icon { background: #fff; box-shadow: 0 6px 16px -6px rgba(11, 31, 46, .35); }
 .bento--projects .card { min-height: 0; }
+.card__media--art { border-bottom: 1px solid var(--c-line); }
+.card:hover .card__media--art img { transform: none; }
