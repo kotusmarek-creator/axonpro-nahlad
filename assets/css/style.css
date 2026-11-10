@@ -1157,3 +1157,4 @@ address { font-style: normal; }
   .pillar__points { gap: 6px; }
   .pillar__points li { font-size: .92rem; }
 }
+.card--project .card__top { justify-content: flex-end; }
