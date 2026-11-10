@@ -70,6 +70,17 @@
       if (!item.contains(ev.relatedTarget)) setOpen(btn, false);
     });
 
+    // Arrow-down on the group link (next to the chevron) also opens the submenu
+    var groupLink = item.querySelector('.nav-link');
+    if (groupLink) groupLink.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowDown') {
+        ev.preventDefault();
+        setOpen(btn, true);
+        var first = item.querySelector('.dropdown a');
+        if (first) first.focus();
+      }
+    });
+
     // Arrow-down from trigger moves into the menu
     btn.addEventListener('keydown', function (ev) {
       if (ev.key === 'ArrowDown') {
@@ -301,7 +312,8 @@
     var lastSpy;
     var updateSpy = function () {
       var line = window.innerHeight * 0.45, cur = null;
-      spySections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) cur = spyMap[s.id]; });
+      var best = -Infinity;
+      spySections.forEach(function (s) { var top = s.getBoundingClientRect().top; if (top <= line && top > best) { best = top; cur = spyMap[s.id]; } });
       if (cur !== lastSpy) {
         lastSpy = cur;
         Array.prototype.forEach.call(spyItems, function (el) {
