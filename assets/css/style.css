@@ -1355,3 +1355,7 @@ address { font-style: normal; }
 @media (min-width: 761px) {
   .prose ul.ai-benefits li:last-child:nth-child(odd), .prose ul.ai-security li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+/* AI and security are plain top-level links (same look as the other menu items) */
+.nav-link { text-decoration: none; }
+.nav-link:hover { text-decoration: none; }
+.nav-link[aria-current="page"] { color: var(--c-brand-600); }
