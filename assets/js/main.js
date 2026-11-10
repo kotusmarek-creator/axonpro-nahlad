@@ -287,6 +287,35 @@
     Object.keys(map).forEach(function (id) { tocObs.observe(doc.getElementById(id)); });
   }
 
+
+  /* ---------------- Homepage: highlight the section in view in the top menu ---------------- */
+  var spyMap = { 'sluzby': 'service', 'softver': 'software', 'projekty': 'project', 'o-nas': 'about', 'kontakt': 'contact' };
+  var spySections = Object.keys(spyMap).map(function (id) { return doc.getElementById(id); }).filter(Boolean);
+  if (spySections.length) {
+    var siteHeader = doc.querySelector('.site-header');
+    var progress = doc.createElement('span');
+    progress.className = 'scroll-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    if (siteHeader) siteHeader.appendChild(progress);
+    var spyItems = doc.querySelectorAll('[data-section]');
+    var lastSpy;
+    var updateSpy = function () {
+      var line = window.innerHeight * 0.45, cur = null;
+      spySections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) cur = spyMap[s.id]; });
+      if (cur !== lastSpy) {
+        lastSpy = cur;
+        Array.prototype.forEach.call(spyItems, function (el) {
+          el.classList.toggle('is-spy', el.getAttribute('data-section') === cur);
+        });
+      }
+      var max = doc.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+    };
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    window.addEventListener('resize', updateSpy);
+    updateSpy();
+  }
+
   /* ---------------- Reveal on scroll ---------------- */
   var reveals = doc.querySelectorAll('.reveal');
   if (reveals.length && 'IntersectionObserver' in window && !reducedMQ.matches) {
