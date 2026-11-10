@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520" role="img" aria-label="Kybernetická bezpečnosť – štít chrániaci firemnú sieť">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#04111b"/>
+      <stop offset=".55" stop-color="#072233"/>
+      <stop offset="1" stop-color="#03101a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="800" cy="262" r="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1fb6d8" stop-opacity=".55"/>
+      <stop offset=".35" stop-color="#1590b5" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#1590b5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="1380" cy="80" r="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2fbfae" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#2fbfae" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="200" cy="480" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1590b5" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#1590b5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shieldStroke" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9DEBFF"/>
+      <stop offset=".5" stop-color="#3FC3E6"/>
+      <stop offset="1" stop-color="#2FBFAE"/>
+    </linearGradient>
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1fb6d8" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#0a4a63" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5fd4f0" stop-opacity="0"/>
+      <stop offset=".6" stop-color="#5fd4f0" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#9debff" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="traceR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#2fbfae" stop-opacity="0"/>
+      <stop offset=".6" stop-color="#2fbfae" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#9debff" stop-opacity=".9"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#5fd4f0" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="gridMask" cx="800" cy="260" r="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fade"><rect width="1600" height="520" fill="url(#gridMask)"/></mask>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <style>
+      .spin { transform-origin: 800px 262px; animation: spin 60s linear infinite; }
+      .spin-r { transform-origin: 800px 262px; animation: spin 90s linear infinite reverse; }
+      .pulse { animation: pulse 3.2s ease-in-out infinite; }
+      .flow { stroke-dasharray: 6 18; animation: flow 2.4s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+      @keyframes flow { to { stroke-dashoffset: -48; } }
+      @media (prefers-reduced-motion: reduce) { .spin, .spin-r, .pulse, .flow { animation: none; } }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="520" fill="url(#bg)"/>
+  <rect width="1600" height="520" fill="url(#grid)" mask="url(#fade)"/>
+  <rect width="1600" height="520" fill="url(#glow2)"/>
+  <rect width="1600" height="520" fill="url(#glow3)"/>
+  <rect width="1600" height="520" fill="url(#glow)"/>
+
+  <!-- left network -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 140H180l40 40h210l60-60h120" stroke="url(#trace)" stroke-width="2"/>
+    <path d="M0 262H260l30-30h200l40 30h105" stroke="url(#trace)" stroke-width="2.5"/>
+    <path d="M0 390H150l50-50h230l60 40h110" stroke="url(#trace)" stroke-width="2"/>
+    <path d="M60 60h120l50 50h120" stroke="#5fd4f0" stroke-opacity=".18" stroke-width="1.5"/>
+    <path d="M40 470h160l40-40h180" stroke="#5fd4f0" stroke-opacity=".18" stroke-width="1.5"/>
+    <path d="M0 262H260l30-30h200l40 30h105" class="flow" stroke="#bff3ff" stroke-opacity=".8" stroke-width="2.5"/>
+    <path d="M0 140H180l40 40h210l60-60h120" class="flow" stroke="#bff3ff" stroke-opacity=".5" stroke-width="2"/>
+  </g>
+  <!-- right network -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1600 120H1430l-40 40h-210l-60 60h-60" stroke="url(#traceR)" stroke-width="2"/>
+    <path d="M1600 262H1340l-30 30h-200l-40-30h-105" stroke="url(#traceR)" stroke-width="2.5"/>
+    <path d="M1600 400H1450l-50-50h-230l-60 30h-120" stroke="url(#traceR)" stroke-width="2"/>
+    <path d="M1540 50h-120l-50 50h-120" stroke="#2fbfae" stroke-opacity=".18" stroke-width="1.5"/>
+    <path d="M1560 480h-160l-40-40h-180" stroke="#2fbfae" stroke-opacity=".18" stroke-width="1.5"/>
+    <path d="M1600 262H1340l-30 30h-200l-40-30h-105" class="flow" stroke="#bff3ff" stroke-opacity=".8" stroke-width="2.5"/>
+    <path d="M1600 400H1450l-50-50h-230l-60 30h-120" class="flow" stroke="#bff3ff" stroke-opacity=".5" stroke-width="2"/>
+  </g>
+
+  <!-- nodes -->
+  <g fill="#0a2a3d" stroke="#5fd4f0" stroke-width="2">
+    <circle cx="220" cy="180" r="6"/><circle cx="430" cy="180" r="6"/><circle cx="490" cy="120" r="6"/>
+    <circle cx="290" cy="232" r="6"/><circle cx="490" cy="232" r="6"/>
+    <circle cx="200" cy="340" r="6"/><circle cx="430" cy="340" r="6"/><circle cx="490" cy="380" r="6"/>
+    <circle cx="230" cy="110" r="4" stroke-opacity=".5"/><circle cx="240" cy="430" r="4" stroke-opacity=".5"/>
+  </g>
+  <g fill="#0a2a3d" stroke="#2fbfae" stroke-width="2">
+    <circle cx="1390" cy="160" r="6"/><circle cx="1180" cy="160" r="6"/><circle cx="1120" cy="220" r="6"/>
+    <circle cx="1310" cy="292" r="6"/><circle cx="1110" cy="292" r="6"/>
+    <circle cx="1400" cy="350" r="6"/><circle cx="1170" cy="350" r="6"/><circle cx="1110" cy="380" r="6"/>
+    <circle cx="1370" cy="100" r="4" stroke-opacity=".5"/><circle cx="1360" cy="440" r="4" stroke-opacity=".5"/>
+  </g>
+  <g fill="#9debff" class="pulse">
+    <circle cx="490" cy="232" r="2.5"/><circle cx="430" cy="180" r="2.5"/><circle cx="1110" cy="292" r="2.5"/><circle cx="1170" cy="350" r="2.5"/>
+  </g>
+
+  <!-- floating data chips (left) -->
+  <g transform="translate(96 196)" opacity=".85">
+    <rect width="92" height="30" rx="8" fill="#0b2d40" stroke="#5fd4f0" stroke-opacity=".35"/>
+    <rect x="12" y="11" width="8" height="8" rx="2" fill="#5fd4f0"/>
+    <rect x="28" y="12" width="50" height="6" rx="3" fill="#5fd4f0" fill-opacity=".45"/>
+  </g>
+  <g transform="translate(300 400)" opacity=".7">
+    <rect width="110" height="30" rx="8" fill="#0b2d40" stroke="#5fd4f0" stroke-opacity=".3"/>
+    <rect x="12" y="11" width="8" height="8" rx="2" fill="#2fbfae"/>
+    <rect x="28" y="12" width="66" height="6" rx="3" fill="#5fd4f0" fill-opacity=".35"/>
+  </g>
+  <!-- floating data chips (right) -->
+  <g transform="translate(1400 214)" opacity=".85">
+    <rect width="104" height="30" rx="8" fill="#0b2d40" stroke="#2fbfae" stroke-opacity=".4"/>
+    <path d="M14 15l4 4 8-9" fill="none" stroke="#2fbfae" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="34" y="12" width="56" height="6" rx="3" fill="#2fbfae" fill-opacity=".45"/>
+  </g>
+  <g transform="translate(1210 70)" opacity=".7">
+    <rect width="96" height="30" rx="8" fill="#0b2d40" stroke="#2fbfae" stroke-opacity=".3"/>
+    <path d="M14 15l4 4 8-9" fill="none" stroke="#2fbfae" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="34" y="12" width="48" height="6" rx="3" fill="#2fbfae" fill-opacity=".35"/>
+  </g>
+
+  <!-- rings around the shield -->
+  <g fill="none">
+    <circle cx="800" cy="262" r="218" stroke="#5fd4f0" stroke-opacity=".10" stroke-width="1"/>
+    <circle class="spin" cx="800" cy="262" r="196" stroke="#5fd4f0" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="2 10"/>
+    <circle class="spin-r" cx="800" cy="262" r="168" stroke="#2fbfae" stroke-opacity=".45" stroke-width="2" stroke-dasharray="60 24 8 24"/>
+    <circle cx="800" cy="262" r="142" stroke="#9debff" stroke-opacity=".18" stroke-width="1"/>
+    <g class="spin">
+      <circle cx="800" cy="66" r="5" fill="#9debff"/>
+      <circle cx="996" cy="262" r="3.5" fill="#5fd4f0"/>
+      <circle cx="604" cy="262" r="3.5" fill="#2fbfae"/>
+    </g>
+  </g>
+
+  <!-- shield -->
+  <g>
+    <path d="M800 150l92 34v66c0 58-38 104-92 124-54-20-92-66-92-124v-66z" fill="#5fd4f0" fill-opacity=".35" filter="url(#blur)"/>
+    <path d="M800 150l92 34v66c0 58-38 104-92 124-54-20-92-66-92-124v-66z" fill="url(#shieldFill)" stroke="url(#shieldStroke)" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M800 170l74 27v53c0 47-30 84-74 101-44-17-74-54-74-101v-53z" fill="none" stroke="#9debff" stroke-opacity=".35" stroke-width="1.5"/>
+    <!-- lock -->
+    <path d="M780 252v-18a20 20 0 0 1 40 0v18" fill="none" stroke="#e9fbff" stroke-width="7" stroke-linecap="round"/>
+    <rect x="766" y="250" width="68" height="54" rx="10" fill="#e9fbff"/>
+    <circle cx="800" cy="272" r="7" fill="#0a3b52"/>
+    <rect x="796.5" y="274" width="7" height="16" rx="3.5" fill="#0a3b52"/>
+    <path d="M800 150l92 34v66c0 58-38 104-92 124-54-20-92-66-92-124v-66z" fill="none" stroke="#bff3ff" stroke-width="1.5" stroke-opacity=".6" filter="url(#soft)"/>
+  </g>
+
+  <!-- scan line -->
+  <g class="pulse">
+    <path d="M640 300h320" stroke="#5fd4f0" stroke-opacity=".35" stroke-width="1.5"/>
+  </g>
+</svg>
