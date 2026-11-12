@@ -1603,3 +1603,19 @@ address { font-style: normal; }
 @media (max-width: 640px) {
   .prose iframe[src*="docs.google.com/forms"] { width: calc(100% + 2 * var(--gutter)); max-width: none; margin-inline: calc(-1 * var(--gutter)); border-radius: 0; }
 }
+
+/* ---- body texts justified site-wide (headings, buttons and menus stay left-aligned) ---- */
+.prose p, .prose li, .prose td,
+.card__excerpt, .card__lead, .card__meta,
+.pillar__lead, .pillar__points li,
+.intro-item__text, .section-intro p,
+.contact-intro p, .fact__label,
+.certs-card p, .side-card p {
+  text-align: justify;
+  -webkit-hyphens: auto; hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+}
+/* items that are short labels or centred by design keep their alignment */
+.prose .ai-flow li, .prose .ai-flow__text, .prose .ai-card__title, .prose .ai-tagline,
+.prose figcaption, .prose .table-wrap td, .prose li > a:only-child { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+.page-hero--center p, .error-page p { text-align: center; }
