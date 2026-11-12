@@ -300,7 +300,7 @@
 
 
   /* ---------------- Homepage: highlight the section in view in the top menu ---------------- */
-  var spyMap = { 'sluzby': 'service', 'softver': 'software', 'projekty': 'project', 'o-nas': 'about', 'kontakt': 'contact' };
+  var spyMap = { 'ai': 'ai', 'bezpecnost': 'security', 'sluzby': 'service', 'softver': 'software', 'projekty': 'project', 'o-nas': 'about', 'kontakt': 'contact' };
   var spySections = Object.keys(spyMap).map(function (id) { return doc.getElementById(id); }).filter(Boolean);
   if (spySections.length) {
     var siteHeader = doc.querySelector('.site-header');

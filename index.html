@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap">
-<link rel="stylesheet" href="/axonpro-nahlad/assets/css/style.css?v=d1425878">
+<link rel="stylesheet" href="/axonpro-nahlad/assets/css/style.css?v=1deab898">
 <script>document.documentElement.classList.replace('no-js','js');</script>
 </head>
 <body>
@@ -72,8 +72,8 @@
     <a class="brand" href="/axonpro-nahlad/" aria-label="AXON PRO – Domov"><img src="/axonpro-nahlad/images/logo.png" alt="AXON PRO" width="223" height="48"></a>
     <nav class="site-nav" id="site-nav" aria-label="Hlavná navigácia" data-nav>
       <ul class="nav-list">
-      <li class="nav-item"><a class="nav-trigger nav-link" href="/axonpro-nahlad/software/ai/">Umelá inteligencia</a></li>
-      <li class="nav-item"><a class="nav-trigger nav-link" href="/axonpro-nahlad/service/security/">Bezpečnosť</a></li>
+      <li class="nav-item" data-section="ai"><a class="nav-trigger nav-link" href="/axonpro-nahlad/software/ai/">Umelá inteligencia</a></li>
+      <li class="nav-item" data-section="security"><a class="nav-trigger nav-link" href="/axonpro-nahlad/service/security/">Bezpečnosť</a></li>
       <li class="nav-item nav-item--dd" data-section="software">
         <a class="nav-trigger nav-link" href="/axonpro-nahlad/software/">Softvér</a>
         <button type="button" class="nav-caret" aria-expanded="false" aria-controls="dd-0" aria-label="Softvér – podmenu" data-dd-toggle><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></button>
@@ -118,53 +118,57 @@
   </div>
 </header>
 <main id="main">
-    <section class="pillars-hero" aria-labelledby="pillars-title">
-      <div class="container">
-        <div class="pillars-hero__head">
-          <h1 id="pillars-title" class="hero-title"><span>Smerujeme váš biznis do budúcnosti</span> <span class="hero-title__sep" aria-hidden="true"></span><span class="grad">už viac ako 30 rokov</span></h1>
+    <section class="intro-hero" aria-labelledby="intro-title">
+      <div class="container intro-hero__grid">
+        <div class="intro-hero__text">
+          <h1 id="intro-title" class="hero-title"><span>Smerujeme váš biznis do budúcnosti</span> <span class="hero-title__sep" aria-hidden="true"></span><span class="grad">už viac ako 30 rokov</span></h1>
+          <p class="intro-hero__lead">Vyvíjame softvér na mieru, nasadzujeme umelú inteligenciu priamo vo vašej sieti, chránime IT infraštruktúru a staráme sa o servery, siete a počítače firiem aj štátnych inštitúcií.</p>
+          <div class="intro-hero__actions">
+            <a class="btn btn--primary" href="#ai">Čo robíme<svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn" href="/axonpro-nahlad/contact/">Kontakt</a>
+          </div>
         </div>
-        <div class="pillars pillars--three">
-        <article class="pillar pillar--ai">
-          <div class="pillar__media pillar__media--contain"><img src="/axonpro-nahlad/assets/img/ai-poster-panel.jpg" alt="Umelá inteligencia" width="1672" height="941" fetchpriority="high"></div>
-          <div class="pillar__body">
-            <div class="pillar__top"><span class="pillar__icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg></span></div>
-            <p class="pillar__label pillar__label--empty" aria-hidden="true">&nbsp;</p>
-            <h2><a class="pillar__link" href="/axonpro-nahlad/software/ai/">Umelá inteligencia</a></h2>
-            <p class="pillar__lead">Ponúkame vám silu AI agenta v bezpečí vášho lokálneho firemného prostredia.</p>
+        <ul class="focus-grid"><li><a href="#ai"><span class="focus-grid__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg></span><strong>Umelá inteligencia</strong><span>Vlastná AI vo vašej sieti</span></a></li><li><a href="#bezpecnost"><span class="focus-grid__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></span><strong>Kybernetická bezpečnosť</strong><span>Audit, testy, ochrana</span></a></li><li><a href="#softver"><span class="focus-grid__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg></span><strong>Softvér na mieru</strong><span>Java, Go, mobilné aplikácie</span></a></li><li><a href="#sluzby"><span class="focus-grid__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-server"/></svg></span><strong>IT služby</strong><span>Linux, cloud, servery, HW</span></a></li></ul>
+      </div>
+      <div class="container"><ul class="facts facts--hero"><li><span class="fact__value">30+</span><span class="fact__label">rokov skúseností v IT</span></li><li><span class="fact__value">1991</span><span class="fact__label">v IT od roku</span></li><li><span class="fact__value">5</span><span class="fact__label">miest na Slovensku</span></li><li><span class="fact__value">4×</span><span class="fact__label">ISO certifikácia (9001, 27001, 14001, 20000-1)</span></li></ul></div>
+    </section>
+
+    <section class="section feature" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title"><h2 id="ai-title"><a href="/axonpro-nahlad/software/ai/">Umelá inteligencia</a></h2></div>
+          
+        </div>
+        <div class="feature__grid">
+          <a class="feature__media" href="/axonpro-nahlad/software/ai/" tabindex="-1" aria-hidden="true"><img src="/axonpro-nahlad/images/banner/banner-11.jpg" alt="" width="1672" height="941" loading="lazy"></a>
+          <div class="feature__body">
+            <p class="feature__kicker">Bezpečná umelá inteligencia</p>
+            <h3>Interný AI asistent, ktorý pozná vaše dokumenty a procesy</h3>
+            <p class="feature__lead">Ponúkame vám silu AI agenta v bezpečí vášho lokálneho firemného prostredia.</p>
             <ul class="pillar__points"><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Ochrana údajov a súkromie</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Nezávislosť a stabilita</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Prispôsobenie na mieru (Customizácia)</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Súlad s legislatívou (Compliance)</span></li></ul>
-            <div class="pillar__foot">
-              <span class="btn btn--glow" aria-hidden="true">Viac info<svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
-              
-            </div>
+            <a class="btn btn--primary" href="/axonpro-nahlad/software/ai/">Viac o umelej inteligencii<svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
           </div>
-        </article>
-<article class="pillar pillar--security">
-          <div class="pillar__media pillar__media--contain"><img src="/axonpro-nahlad/assets/img/security-poster-panel.jpg" alt="Kybernetická bezpečnosť: audit, testovanie, ochrana" width="1672" height="941"></div>
-          <div class="pillar__body">
-            <div class="pillar__top"><span class="pillar__icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></span></div>
-            <p class="pillar__label">Bezpečnosť</p>
-            <h2><a class="pillar__link" href="/axonpro-nahlad/service/security/">Bezpečnostné riešenia pre IKT</a></h2>
-            <p class="pillar__lead">Potrebujete získať jasný prehľad o bezpečnosti vašej IT infraštruktúry?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint feature feature--reverse" id="bezpecnost" aria-labelledby="sec-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title"><h2 id="sec-title"><a href="/axonpro-nahlad/service/security/">Kybernetická bezpečnosť</a></h2></div>
+          
+        </div>
+        <div class="feature__grid">
+          <a class="feature__media" href="/axonpro-nahlad/service/security/" tabindex="-1" aria-hidden="true"><img src="/axonpro-nahlad/assets/img/security-poster.jpg" alt="" width="1672" height="941" loading="lazy"></a>
+          <div class="feature__body">
+            <p class="feature__kicker">Bezpečnostné riešenia pre IKT</p>
+            <h3>Potrebujete získať jasný prehľad o bezpečnosti vašej IT infraštruktúry?</h3>
             <ul class="pillar__points"><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Audit kybernetickej bezpečnosti</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Bezpečnostná dokumentácia</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Kontrola a audit bezpečnostných konfigurácií</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Testovanie a identifikácia zraniteľností</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Ochrana identít a používateľská bezpečnosť</span></li></ul>
-            <div class="pillar__foot">
-              <span class="btn btn--glow" aria-hidden="true">Viac info<svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
-              <img class="pillar__badge" src="/axonpro-nahlad/images/about/SKQS-certifikacna_znacka_ISO_27001.png" alt="ISO 27001" width="52" height="52" loading="lazy">
+            <div class="feature__foot">
+              <a class="btn btn--primary" href="/axonpro-nahlad/service/security/">Viac o bezpečnosti<svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+              <img class="feature__badge" src="/axonpro-nahlad/images/about/SKQS-certifikacna_znacka_ISO_27001.png" alt="ISO 27001" width="56" height="56" loading="lazy">
             </div>
           </div>
-        </article>
-        <article class="pillar pillar--services">
-          <div class="pillar__media pillar__media--contain"><img src="/axonpro-nahlad/assets/img/it-poster-panel.jpg" alt="IT riešenia: softvér, servery, cloud" width="1672" height="941" loading="lazy"></div>
-          <div class="pillar__body">
-            <div class="pillar__top"><span class="pillar__icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg></span></div>
-            <p class="pillar__label">Ďalšie služby</p>
-            <h2><a class="pillar__link" href="/axonpro-nahlad/service/">IT riešenia</a></h2>
-            <p class="pillar__lead">Komplexné IT služby, správa firemných počítačov, zariadení a sietí</p>
-            <ul class="pillar__points"><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Vývoj softvéru – Spravíme vašej firme softvér na mieru</span></li><li><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg><span>Správa serverov – Linux, Windows, Cloud, Kubernetes</span></li></ul>
-            <div class="pillar__foot">
-              <span class="btn btn--glow" aria-hidden="true">Viac info<svg class="icon icon--arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
-            </div>
-          </div>
-        </article>
         </div>
       </div>
     </section>
@@ -266,7 +270,10 @@
           <div class="section-head__title"><h2 id="sluzby-title"><a href="/axonpro-nahlad/service/">Služby</a></h2></div>
           
         </div>
-        <div class="section-intro"><a class="intro-item" href="/axonpro-nahlad/service/linux/">
+        <div class="section-intro"><a class="intro-item" href="/axonpro-nahlad/service/server/">
+            <span class="intro-item__kicker">dodávame</span><strong class="intro-item__title">IT riešenia</strong><span class="intro-item__text">Komplexné IT služby, správa firemných počítačov, zariadení a sietí</span>
+            <span class="intro-item__arrow" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
+          </a><a class="intro-item" href="/axonpro-nahlad/service/linux/">
             <span class="intro-item__kicker">Linux, Windows, Cloud, Kubernetes</span><strong class="intro-item__title">Správa serverov</strong><span class="intro-item__text">Zabezpečíme, aby vaše služby boli dostupné, servre zabezpečené a vaše dáta ochránené</span>
             <span class="intro-item__arrow" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span>
           </a></div>
@@ -309,7 +316,6 @@
           <div class="section-head__title"><h2 id="onas-title"><a href="/axonpro-nahlad/about/">O nás</a></h2></div>
           
         </div>
-        <ul class="facts reveal"><li><span class="fact__value">30+</span><span class="fact__label">rokov skúseností v IT</span></li><li><span class="fact__value">1991</span><span class="fact__label">v IT od roku</span></li><li><span class="fact__value">5</span><span class="fact__label">miest na Slovensku</span></li><li><span class="fact__value">4×</span><span class="fact__label">ISO certifikácia (9001, 27001, 14001, 20000-1)</span></li></ul>
         <div class="bento bento--rail">
         <article class="card reveal">
           <div class="card__media card__media--art"><img src="/axonpro-nahlad/assets/img/cards/strategia.svg" alt="" width="640" height="300" loading="lazy"></div>
@@ -401,6 +407,6 @@
     </div>
   </div>
 </footer>
-<script src="/axonpro-nahlad/assets/js/main.js?v=d1425878" defer></script>
+<script src="/axonpro-nahlad/assets/js/main.js?v=1deab898" defer></script>
 </body>
 </html>
