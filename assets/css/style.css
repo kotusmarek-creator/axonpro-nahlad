@@ -2109,3 +2109,18 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
 @media (prefers-reduced-motion: reduce) { .hero-scroll { animation: none; } }
 /* homepage intro: very faint globe + constellation in the background (_design/hero-bg/make.py, variant d) */
 .intro-hero--d::before { background: url(/axonpro-nahlad/assets/img/hero-bg.svg) center / cover no-repeat, radial-gradient(55% 70% at 8% 0%, rgba(21,144,181,.15), transparent 70%), radial-gradient(45% 60% at 82% 34%, rgba(124,198,220,.26), transparent 70%), linear-gradient(180deg, #E4F2F8, #F5FAFC); }
+
+/* homepage contact band: contact details in one row next to the title, branches side by side below */
+.contact-panel--rows { display: grid; gap: clamp(28px, 3.5vw, 44px); }
+.contact-top { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 2fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.contact-panel--rows .contact-intro { gap: 20px; }
+.contact-list--grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; }
+.branches--row { padding-top: clamp(24px, 3vw, 36px); border-top: 1px solid var(--c-brand-100); }
+.branch-grid--row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) {
+  .contact-top { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .contact-list--grid { grid-template-columns: minmax(0, 1fr); }
+  .branch-grid--row { grid-template-columns: minmax(0, 1fr); }
+}
