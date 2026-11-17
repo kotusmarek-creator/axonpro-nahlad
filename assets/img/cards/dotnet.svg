@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <!-- card graphic: .NET and .NET Core. Content in 0..640; background extends to -400..1040 for the wide variant -->
+  <defs>
+    <linearGradient id="bg" x1="-400" y1="0" x2="1040" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <linearGradient id="hx" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1590B5"/><stop offset="1" stop-color="#005A77"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect x="-400" y="0" width="1440" height="300" fill="url(#bg)"/>
+  <!-- outer decor for the wide variant -->
+  <circle cx="-190" cy="92" r="40" fill="#D9EEF5" opacity=".55"/>
+  <circle cx="820" cy="214" r="46" fill="#D9EEF5" opacity=".55"/>
+  <!-- soft background shapes -->
+  <circle cx="320" cy="150" r="126" fill="#DDEFF6"/>
+  <circle cx="126" cy="230" r="22" fill="#D9EEF5" opacity=".8"/>
+  <circle cx="520" cy="70" r="26" fill="#D9EEF5" opacity=".8"/>
+
+  <!-- code window -->
+  <g filter="url(#sh)"><rect x="236" y="62" width="250" height="176" rx="18" fill="#fff"/></g>
+  <rect x="236" y="62" width="250" height="32" rx="18" fill="#F0F6F9"/>
+  <rect x="236" y="78" width="250" height="16" fill="#F0F6F9"/>
+  <circle cx="256" cy="78" r="5" fill="#7CC6DC"/><circle cx="272" cy="78" r="5" fill="#D9EEF5"/><circle cx="288" cy="78" r="5" fill="#D9EEF5"/>
+  <g stroke-linecap="round" stroke-width="7">
+    <path d="M300 116h70" stroke="#007194"/><path d="M380 116h40" stroke="#D9EEF5"/>
+    <path d="M318 136h56" stroke="#1590B5"/><path d="M384 136h70" stroke="#D9EEF5"/>
+    <path d="M318 156h90" stroke="#7CC6DC"/>
+    <path d="M336 176h48" stroke="#1590B5"/><path d="M394 176h44" stroke="#D9EEF5"/>
+    <path d="M318 196h64" stroke="#D9EEF5"/>
+    <path d="M300 216h30" stroke="#007194"/>
+  </g>
+
+  <!-- hexagon badge with C# -->
+  <g filter="url(#sh)">
+    <path d="M204 112l46 26.5v53L204 218l-46-26.5v-53z" fill="#fff"/>
+  </g>
+  <path d="M204 124l36 20.8v41.6L204 207l-36-20.6v-41.6z" fill="url(#hx)"/>
+  <text x="204" y="176" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">C#</text>
+
+  <!-- api / service badge -->
+  <g filter="url(#sh)"><rect x="452" y="160" width="96" height="70" rx="16" fill="#fff"/></g>
+  <circle cx="474" cy="182" r="7" fill="#2FBFAE"/><circle cx="474" cy="208" r="7" fill="#7CC6DC"/>
+  <path d="M490 182h40M490 208h30" stroke="#D9EEF5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M486 160v-20" stroke="#7CC6DC" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="182" cy="76" r="4"/><circle cx="452" cy="106" r="3"/><circle cx="214" cy="250" r="3" fill="#2FBFAE"/>
+    <path d="M520 118l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#F5B041"/>
+  </g>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560">
+  <!-- illustration: Bezpečnosť – riešenia pre IKT (audits, documentation, configuration, vulnerability testing, identity) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF5FA"/><stop offset="1" stop-color="#F6FAFC"/>
+    </linearGradient>
+    <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1590B5"/><stop offset="1" stop-color="#005A77"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0B1F2E" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <!-- no background rectangle: the page card behind it provides the tint -->
+
+  <!-- soft background shapes -->
+  <circle cx="230" cy="270" r="170" fill="#D9EEF5" opacity=".45"/>
+  <circle cx="1060" cy="280" r="170" fill="#D9EEF5" opacity=".45"/>
+  <circle cx="640" cy="285" r="232" fill="#DDEFF6"/>
+  <circle cx="60" cy="480" r="34" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="1230" cy="70" r="30" fill="#D9EEF5" opacity=".7"/>
+  <circle cx="640" cy="285" r="198" fill="none" stroke="#7CC6DC" stroke-width="3" stroke-dasharray="3 12" stroke-linecap="round"/>
+
+  <!-- network links -->
+  <g fill="none" stroke="#7CC6DC" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round">
+    <path d="M640 285L402 152L235 155L205 395L402 386L640 285"/>
+    <path d="M640 285L878 152L1075 155L1080 400L878 392L640 285"/>
+  </g>
+  <g fill="#fff" stroke="#7CC6DC" stroke-width="3">
+    <circle cx="470" cy="190" r="7"/><circle cx="480" cy="353" r="7"/>
+    <circle cx="810" cy="190" r="7"/><circle cx="800" cy="353" r="7"/>
+    <circle cx="220" cy="285" r="6"/><circle cx="1078" cy="285" r="6"/>
+  </g>
+
+  <!-- central shield -->
+  <g transform="translate(640 285) scale(1.6) translate(-320 -144)">
+    <g filter="url(#sh)"><path d="M320 48l78 28v58c0 52-34 88-78 106-44-18-78-54-78-106V76z" fill="#fff"/></g>
+    <path d="M320 72l56 20v42c0 38-24 64-56 78-32-14-56-40-56-78V92z" fill="url(#sg)"/>
+    <path d="M296 140l17 17 33-36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- server -->
+  <rect x="192" y="236" width="20" height="14" rx="5" fill="#7CC6DC"/>
+  <rect x="258" y="236" width="20" height="14" rx="5" fill="#7CC6DC"/>
+  <g filter="url(#sh)"><rect x="170" y="70" width="130" height="170" rx="18" fill="#fff"/></g>
+  <g fill="#F0F6F9"><rect x="185" y="86" width="100" height="42" rx="9"/><rect x="185" y="134" width="100" height="42" rx="9"/><rect x="185" y="182" width="100" height="42" rx="9"/></g>
+  <circle cx="201" cy="107" r="5" fill="#2FBFAE"/><circle cx="216" cy="107" r="5" fill="#7CC6DC"/>
+  <circle cx="201" cy="155" r="5" fill="#2FBFAE"/><circle cx="216" cy="155" r="5" fill="#F5B041"/>
+  <circle cx="201" cy="203" r="5" fill="#2FBFAE"/><circle cx="216" cy="203" r="5" fill="#7CC6DC"/>
+  <g stroke-linecap="round" stroke-width="7">
+    <path d="M236 102h36M236 150h36M236 198h36" stroke="#1590B5"/>
+    <path d="M236 114h22M236 162h22M236 210h22" stroke="#D9EEF5"/>
+  </g>
+
+  <!-- laptop -->
+  <g filter="url(#sh)">
+    <rect x="122" y="330" width="166" height="110" rx="14" fill="#fff"/>
+    <path d="M98 440h214l-10 16a8 8 0 0 1-7 4H115a8 8 0 0 1-7-4z" fill="#fff"/>
+  </g>
+  <rect x="136" y="344" width="138" height="82" rx="8" fill="#F0F6F9"/>
+  <path d="M182 440h46l-4 6h-38z" fill="#D9EEF5"/>
+  <path d="M205 357l19 7v13c0 13-8 21-19 26-11-5-19-13-19-26v-13z" fill="#1590B5"/>
+  <path d="M197 380l6 6 10-11" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M236 372h24M236 386h16M150 372h18M150 386h12" stroke="#D9EEF5" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- lock badge -->
+  <g filter="url(#sh)"><rect x="360" y="110" width="84" height="84" rx="20" fill="#fff"/></g>
+  <path d="M389 148v-8a13 13 0 0 1 26 0v8" fill="none" stroke="#1590B5" stroke-width="6"/>
+  <rect x="381" y="146" width="42" height="32" rx="7" fill="#1590B5"/>
+  <circle cx="402" cy="159" r="4.5" fill="#fff"/><rect x="400" y="161" width="4" height="8" rx="2" fill="#fff"/>
+
+  <!-- identity badge with key -->
+  <g filter="url(#sh)"><rect x="338" y="344" width="128" height="88" rx="18" fill="#fff"/></g>
+  <circle cx="374" cy="380" r="18" fill="#DDEFF6"/>
+  <circle cx="374" cy="374" r="7" fill="#1590B5"/>
+  <path d="M362 392a12 10 0 0 1 24 0z" fill="#1590B5"/>
+  <path d="M402 374h46M402 388h30M354 412h50" stroke="#D9EEF5" stroke-width="7" stroke-linecap="round"/>
+  <g filter="url(#sh)">
+    <circle cx="452" cy="420" r="15" fill="#F5B041"/>
+    <path d="M462 414h34a4 4 0 0 1 0 12h-4v8h-8v-8h-6v6h-8v-6h-8z" fill="#F5B041"/>
+  </g>
+  <circle cx="450" cy="420" r="5" fill="#fff"/>
+
+  <!-- cloud badge -->
+  <g filter="url(#sh)"><rect x="836" y="110" width="84" height="84" rx="20" fill="#fff"/></g>
+  <path d="M862 170h34a12 12 0 0 0 1-24a16 16 0 0 0-30-4a11 11 0 0 0-5 28z" fill="#1590B5"/>
+  <path d="M872 159l6 6 10-11" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- vulnerability scan / radar -->
+  <g filter="url(#sh)"><circle cx="878" cy="392" r="50" fill="#fff"/></g>
+  <g fill="none" stroke="#BFE2EE" stroke-width="2.5">
+    <circle cx="878" cy="392" r="35"/><circle cx="878" cy="392" r="22"/>
+    <path d="M878 357v70M843 392h70"/>
+  </g>
+  <path d="M878 392V357a35 35 0 0 1 25 10z" fill="#2FBFAE" opacity=".35"/>
+  <path d="M878 392l25-25" stroke="#2FBFAE" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="878" cy="392" r="4" fill="#007194"/>
+  <circle cx="893" cy="373" r="5" fill="#F5B041"/>
+  <circle cx="862" cy="408" r="4" fill="#1590B5"/>
+
+  <!-- audit checklist -->
+  <g filter="url(#sh)"><rect x="980" y="70" width="190" height="170" rx="18" fill="#fff"/></g>
+  <rect x="1000" y="90" width="72" height="10" rx="5" fill="#1590B5"/>
+  <circle cx="1010" cy="130" r="10" fill="#2FBFAE"/><path d="M1005.5 130l3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1010" cy="166" r="10" fill="#2FBFAE"/><path d="M1005.5 166l3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1010" cy="202" r="10" fill="#F5B041"/><path d="M1010 197v5" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="1010" cy="207" r="1.7" fill="#fff"/>
+  <path d="M1032 130h116M1032 166h92M1032 202h104" stroke="#D9EEF5" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- report chart -->
+  <g filter="url(#sh)"><rect x="990" y="330" width="180" height="140" rx="18" fill="#fff"/></g>
+  <path d="M1008 450h144" stroke="#D9EEF5" stroke-width="4" stroke-linecap="round"/>
+  <rect x="1015" y="406" width="22" height="40" rx="5" fill="#7CC6DC"/>
+  <rect x="1051" y="384" width="22" height="62" rx="5" fill="#1590B5"/>
+  <rect x="1087" y="396" width="22" height="50" rx="5" fill="#7CC6DC"/>
+  <rect x="1123" y="362" width="22" height="84" rx="5" fill="#007194"/>
+
+  <!-- sparkles -->
+  <g fill="#1590B5">
+    <circle cx="560" cy="62" r="4"/><circle cx="742" cy="510" r="4"/><circle cx="318" cy="280" r="3"/>
+    <circle cx="960" cy="272" r="3" fill="#2FBFAE"/><circle cx="110" cy="240" r="4" fill="#2FBFAE"/>
+    <circle cx="1206" cy="300" r="4"/><circle cx="500" cy="500" r="3" fill="#2FBFAE"/>
+    <path d="M752 58l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#7CC6DC"/>
+    <path d="M520 470l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#7CC6DC"/>
+    <path d="M1212 470l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#7CC6DC"/>
+    <path d="M96 90l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#7CC6DC"/>
+  </g>
+</svg>

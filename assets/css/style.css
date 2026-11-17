@@ -2061,3 +2061,51 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
 /* phones: no room for 2020 next to today – EWA is named at its 2023 milestone */
 @media (max-width: 620px) { .hd-tl__m:nth-child(4), .hd-tl__m:nth-child(5) { display: none; } } /* phones: 2015 and 2020 hidden */
 .hd-tl__m:nth-child(7) { animation-delay: .8s; }
+/* text + illustration side by side (e.g. security page, 'Why choose us') */
+.prose .ai-media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 40px); align-items: center; margin-top: 1.2em; }
+.prose .ai-media ul.ai-benefits { grid-template-columns: minmax(0, 1fr); margin: 0; }
+.prose .ai-media ul.ai-benefits li:last-child:nth-child(odd) { grid-column: auto; }
+.prose .ai-media figure { margin: 0; }
+.prose .ai-media img { display: block; width: 100%; max-width: 560px; height: auto; margin-inline: auto; border-radius: var(--r-lg); }
+@media (max-width: 760px) {
+  .prose .ai-media { grid-template-columns: minmax(0, 1fr); }
+  .prose .ai-media figure { order: -1; }
+  .prose .ai-media img { max-width: 380px; }
+}
+
+/* panels: no justified text in narrow cards (avoids wide word gaps) */
+.prose ul.ai-benefits li, .prose .ai-card, .prose .ai-card p, .prose .ai-card li, .prose ul.ai-security li, .prose .ai-flow li, .prose .ai-media li { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+/* text + illustration: the picture sits in a tinted card as tall as the list next to it */
+.prose .ai-media { align-items: stretch; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.prose .ai-media figure { display: grid; place-items: center; height: 100%; padding: clamp(16px, 2vw, 28px); border-radius: var(--r-lg);
+  background: radial-gradient(70% 80% at 50% 45%, rgba(21,144,181,.10), transparent 70%), linear-gradient(160deg, var(--c-brand-50), #fff 85%);
+  border: 1px solid var(--c-brand-100); box-shadow: var(--sh-1); }
+.prose .ai-media img { width: 100%; max-width: none; border-radius: 12px; }
+@media (max-width: 760px) { .prose .ai-media figure { height: auto; } .prose .ai-media img { max-width: 420px; } }
+.prose .ai-media figure { padding: clamp(10px, 1.4vw, 18px); background: radial-gradient(75% 80% at 50% 48%, rgba(21,144,181,.12), transparent 72%), linear-gradient(160deg, #EAF5FA, #F6FAFC 85%); }
+.prose .ai-media img { border-radius: 0; }
+
+/* homepage intro fills the first screen (the next section – AI – starts below the fold) */
+@media (min-width: 761px) {
+  .intro-hero--d { min-height: calc(100vh - var(--header-h)); min-height: calc(100svh - var(--header-h)); display: flex; align-items: center; }
+  .intro-hero--d > .container { width: 100%; }
+}
+/* bigger screens: let the intro content grow with the available height */
+@media (min-width: 761px) { .te-tile { min-height: clamp(212px, 25vh, 300px); } }
+@media (min-width: 1300px) and (min-height: 880px) {
+  .intro-hero .hero-title { font-size: clamp(3.1rem, 1.2rem + 2.2vw, 3.9rem); }
+  .intro-hero--d .hd-lead { font-size: 1.25rem; max-width: 52ch; }
+}
+/* scroll cue at the bottom of the full-screen intro */
+.hero-scroll { display: none; }
+@media (min-width: 761px) {
+  .intro-hero--d { position: relative; }
+  .hero-scroll { display: grid; place-items: center; position: absolute; left: 50%; bottom: clamp(14px, 3vh, 32px); translate: -50% 0; width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,.85); border: 1px solid var(--c-brand-100); box-shadow: var(--sh-1); color: var(--c-brand-600); text-decoration: none; animation: hero-scroll 2.4s ease-in-out infinite; }
+  .hero-scroll .icon { rotate: 90deg; }
+  .hero-scroll:hover { background: #fff; }
+}
+@keyframes hero-scroll { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { .hero-scroll { animation: none; } }
+/* homepage intro: very faint globe + constellation in the background (_design/hero-bg/make.py, variant d) */
+.intro-hero--d::before { background: url(/axonpro-nahlad/assets/img/hero-bg.svg) center / cover no-repeat, radial-gradient(55% 70% at 8% 0%, rgba(21,144,181,.15), transparent 70%), radial-gradient(45% 60% at 82% 34%, rgba(124,198,220,.26), transparent 70%), linear-gradient(180deg, #E4F2F8, #F5FAFC); }
