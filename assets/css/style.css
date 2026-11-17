@@ -1992,66 +1992,32 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
 @media (forced-colors: active), (prefers-contrast: more) { body::before, body::after { display: none; } }
 
 /* ==========================================================================
-   Homepage intro: focus areas as soft-blue tiles with card infographics, logo in the middle
+   Homepage intro: the four focus areas as photo tiles (Unsplash photos in assets/img/photos/hero-*.jpg)
+   One colour treatment for all photos so they read as one series in the brand palette:
+   slightly desaturated + logo-teal tint, text on a brand-900 gradient.
    ========================================================================== */
 .te { grid-area: dash; position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.te-tile { --c1: #04455A; --c2: #007194; position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: 212px; border-radius: 22px; overflow: hidden;
-  text-decoration: none; color: #fff; box-shadow: 0 22px 44px -26px rgba(0,60,80,.7); transition: transform var(--dur) var(--ease); }
-.te-tile:hover { transform: translateY(-4px); }
-.te-tile:hover .te-art { transform: scale(1.04); }
-.te-ai { --c1: #1B6E8B; --c2: #3A94B4; border-radius: 22px 22px 8px 22px; }
-.te-sec { --c1: #1E7697; --c2: #409CBD; border-radius: 22px 22px 22px 8px; }
-.te-sw { --c1: #22809F; --c2: #4AA5C3; border-radius: 22px 8px 22px 22px; }
-.te-it { --c1: #2788A8; --c2: #53ADCA; border-radius: 8px 22px 22px 22px; }
-.te-art { position: absolute; inset: 0 0 34%; z-index: -2; background-size: cover; background-position: center 45%; transition: transform .6s var(--ease); }
-.te-tile::after { content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(0deg, var(--c1) 0%, var(--c2) 40%, color-mix(in srgb, var(--c2) 55%, transparent) 58%, color-mix(in srgb, var(--c2) 12%, transparent) 78%, transparent 100%); }
-.te-body { display: grid; gap: 6px; width: 100%; padding: 18px 22px 20px; }
-.te-ai .te-body, .te-sw .te-body { padding-right: 64px; } .te-sec .te-body, .te-it .te-body { padding-left: 64px; }
-.te-h { display: flex; align-items: center; gap: 12px; }
-.te-ic { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.18); box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); backdrop-filter: blur(4px); }
-.te-ic .icon { width: 21px; height: 21px; }
-.te-h strong { font: 800 1.1rem/1.2 var(--f-display); letter-spacing: -.015em; text-shadow: 0 1px 8px rgba(0,40,55,.25); }
-.te-s { font-size: .86rem; color: #fff; text-shadow: 0 1px 6px rgba(0,40,55,.3); }
-.te-go { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; padding: 8px; border-radius: 50%; background: rgba(255,255,255,.9); color: var(--c-brand-600); }
-.te-logo { position: absolute; left: 50%; top: 50%; translate: -50% -50%; z-index: 2; width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; background: #fff;
-  box-shadow: 0 0 0 8px #EAF5F9, 0 20px 40px -16px rgba(0,60,80,.6); }
-.te-logo img { width: 50px; height: auto; }
-@media (max-width: 620px) {
-  .te-tile { min-height: 170px; } .te-body { padding: 12px 14px 14px !important; } .te-s { display: none; }
-  .te-h { gap: 8px; } .te-ic { width: 32px; height: 32px; border-radius: 10px; } .te-ic .icon { width: 17px; height: 17px; } .te-h strong { font-size: .92rem; }
-  .te-art { inset: 0 0 45%; } .te-logo { display: none; }
-}
+.te-tile { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: 230px; border-radius: 18px; overflow: hidden;
+  text-decoration: none; color: #fff; background: var(--c-brand-800); box-shadow: 0 22px 44px -26px rgba(0,40,60,.6); transition: transform var(--dur) var(--ease); }
+.te-img { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; object-fit: cover; filter: saturate(.8) contrast(1.02); transition: transform .6s var(--ease); }
+.te-tile::before { content: ""; position: absolute; inset: 0; z-index: -2; pointer-events: none;
+  background: linear-gradient(150deg, var(--c-brand-500) 0%, var(--c-brand-700) 100%); mix-blend-mode: color; opacity: .35; }
+.te-tile::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(0deg, rgba(3,47,62,.92) 0%, rgba(3,47,62,.55) 42%, rgba(3,47,62,0) 72%); }
+.te-tile:hover { transform: translateY(-3px); }
+.te-tile:hover, .te-tile:focus-visible, .te-tile:hover .te-body strong { color: #fff; } /* not the global a:hover blue */
+.te-tile:hover .te-img { transform: scale(1.05); }
+.te-tile:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 3px; }
+.te-body { display: grid; gap: 4px; padding: 20px 22px; }
+.te-body strong { font: 700 1.2rem/1.2 var(--f-display); letter-spacing: -.01em; }
+.te-s { font-size: .9rem; color: rgba(255,255,255,.85); }
+.te-go { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; padding: 8px; border-radius: 50%;
+  background: rgba(255,255,255,.18); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #fff; }
 @media (max-width: 1180px) { .te { width: 100%; } }
-
-/* intro tiles: light panels with dark text (more contrast, less blue) */
-.te-tile { color: var(--c-ink); background: #fff; border: 1px solid var(--c-brand-100); box-shadow: 0 1px 2px rgba(11,31,46,.04), 0 20px 40px -26px rgba(0,90,119,.45); }
-.te-tile::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; z-index: 1; background: linear-gradient(90deg, var(--c2), var(--c-brand-300)); }
-.te-ai { --c2: #005A77; } .te-sec { --c2: #007194; } .te-sw { --c2: #1590B5; } .te-it { --c2: #3FA9CB; }
-.te-art { inset: 0 0 30%; background-position: center 40%; }
-.te-tile::after { background: linear-gradient(0deg, #fff 0%, #fff 34%, rgba(255,255,255,.88) 46%, rgba(255,255,255,.35) 62%, rgba(255,255,255,0) 78%); }
-.te-ic { color: #fff; background: linear-gradient(145deg, var(--c-brand-500), var(--c-brand-700)); box-shadow: 0 6px 14px -6px rgba(0,90,119,.6); backdrop-filter: none; }
-.te-h strong { color: var(--c-ink); text-shadow: none; }
-.te-s { color: var(--c-ink-2); text-shadow: none; }
-.te-go { background: var(--c-brand-600); color: #fff; }
-.te-tile:hover { border-color: var(--c-brand-300); }
-.te-sw .te-go, .te-it .te-go { top: auto; bottom: 14px; } /* away from the logo */
-
-/* intro tiles: soft sea pastels (one tint per area) */
-.te-ai { --p: #E4F3F8; --d: #006F92; }
-.te-sec { --p: #E3F5F1; --d: #16897A; }
-.te-sw { --p: #EAF0FC; --d: #4766C4; }
-.te-it { --p: #E8F5FB; --d: #1F86AD; }
-
-.te-tile::before { background: var(--d); }
-.te-go { background: var(--d); }
-
-.te-tile { background: var(--p); border-color: color-mix(in srgb, var(--d) 22%, #fff); }
-.te-tile::after { background: linear-gradient(0deg, var(--p) 0%, var(--p) 34%, color-mix(in srgb, var(--p) 88%, transparent) 46%,
-  color-mix(in srgb, var(--p) 35%, transparent) 62%, transparent 78%); }
-.te-ic { background: var(--d); box-shadow: 0 6px 14px -6px color-mix(in srgb, var(--d) 70%, transparent); }
-.te-h strong { color: color-mix(in srgb, var(--d) 30%, #0B1F2E); }
-@media (max-width: 620px) { .te-sw .te-go, .te-it .te-go { top: 14px; bottom: auto; } }
+@media (max-width: 620px) {
+  .te-tile { min-height: 170px; } .te-body { padding: 14px; } .te-body strong { font-size: 1rem; } .te-s { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .te-tile, .te-img { transition: none; } .te-tile:hover, .te-tile:hover .te-img { transform: none; } }
 /* timeline: short labels from tablet width down (2020 / 2023 / today sit close together) */
 @media (max-width: 1280px) {
   .hd-tl__long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
@@ -2145,3 +2111,10 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
 }
 @media (prefers-reduced-motion: reduce) { .prose ul.partners li { transition: none; } .prose ul.partners li:hover { transform: none; } }
 @media (max-width: 640px) { .prose ul.partners { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .prose ul.partners li { padding: 16px; min-height: 0; } .partners__name { font-size: 1.05rem; } }
+
+/* Software section: three equal cards (.NET page removed); on the 2-column layout the first card takes the full row */
+@media (min-width: 641px) and (max-width: 960px) {
+  .bento--software > .card:first-child { grid-column: 1 / -1; }
+  .bento--software > .card:last-child { grid-column: auto; }
+  .bento--software > .card:first-child .card__media--art { aspect-ratio: auto; height: clamp(160px, 26vw, 220px); }
+}
