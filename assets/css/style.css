@@ -574,6 +574,22 @@ address { font-style: normal; }
 .branch :is(h3, h4) { font-size: 1.05rem; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
 .branch :is(h3, h4) .icon { width: 16px; height: 16px; color: #8FD8EC; }
 .branch p + p { margin-top: 6px; }
+/* Google Maps link: top-right corner of every branch card and of the main contact panel */
+.branch { position: relative; }
+.branch :is(h3, h4) { padding-right: 92px; }
+.map-link { position: absolute; top: 16px; right: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--c-line); box-shadow: var(--sh-1);
+  font-size: var(--fs-sm); font-weight: 600; line-height: 1.2; color: var(--c-brand-600) !important; text-decoration: none !important;
+  transition: border-color .2s, box-shadow .2s; }
+.map-link:hover { border-color: var(--c-brand-300); box-shadow: var(--sh-2); color: var(--c-brand-700) !important; }
+.map-link .icon { width: 16px; height: 16px; }
+.map-link--inline { position: static; align-self: center; padding: 10px 16px; font-size: var(--fs-md); }
+.contact-actions:has(.map-link--inline) { align-items: center; }
+/* contact form button + Mapa side by side: the intro column grows to fit both */
+@media (min-width: 1200px) {
+  .contact-panel--rows .contact-actions { flex-wrap: nowrap; }
+  .contact-panel--rows .contact-top { grid-template-columns: minmax(max-content, .8fr) minmax(0, 2fr); }
+}
 @media (max-width: 960px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 520px) { .branch-grid { grid-template-columns: minmax(0, 1fr); } .contact-panel { border-radius: var(--r-lg); } }
 
