@@ -2124,3 +2124,24 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
   .contact-list--grid { grid-template-columns: minmax(0, 1fr); }
   .branch-grid--row { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ---------- Partners page (/about/partneri/) ---------- */
+.prose ul.partners { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-block: 1.6em; }
+.prose ul.partners li {
+  display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 120px;
+  padding: 22px 22px; border-radius: var(--r-md); background: var(--c-surface);
+  border: 1px solid var(--c-line); box-shadow: var(--sh-1); line-height: 1.45;
+  transition: box-shadow .2s, border-color .2s, transform .2s;
+}
+.prose ul.partners li::before { display: none; }
+.prose ul.partners li, .prose ul.partners li span { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+.prose ul.partners li:hover { box-shadow: var(--sh-2); border-color: var(--c-brand-100); transform: translateY(-2px); }
+.partners__name { font-family: var(--f-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -.02em; color: var(--c-ink); }
+.partners__desc { font-size: var(--fs-sm); color: var(--c-muted); }
+.partners__badge {
+  align-self: flex-start; margin-top: 4px; padding: 3px 10px; border-radius: 999px;
+  background: linear-gradient(135deg, #EEF1F4, #CDD5DD); color: #33414E;
+  font-size: var(--fs-xs); font-weight: 600; letter-spacing: .02em; border: 1px solid #C2CCD6;
+}
+@media (prefers-reduced-motion: reduce) { .prose ul.partners li { transition: none; } .prose ul.partners li:hover { transform: none; } }
+@media (max-width: 640px) { .prose ul.partners { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .prose ul.partners li { padding: 16px; min-height: 0; } .partners__name { font-size: 1.05rem; } }
