@@ -342,3 +342,12 @@
     Array.prototype.forEach.call(reveals, function (el) { el.classList.add('is-visible'); });
   }
 })();
+
+/* mobile menu: a click on an in-page link (#…) closes the menu and open dropdowns */
+document.addEventListener('click',function(e){
+  var a=e.target.closest('.site-nav a[href^="#"]'); if(!a) return;
+  var t=document.querySelector('[data-nav-toggle]');
+  if(t&&t.getAttribute('aria-expanded')==='true') t.click();
+  document.querySelectorAll('[data-dd-toggle][aria-expanded="true"]').forEach(function(b){b.click();});
+  if(document.activeElement) document.activeElement.blur();
+});

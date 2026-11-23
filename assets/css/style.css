@@ -2142,3 +2142,77 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
 .prose .faq__item + .faq__item { margin-top: .75rem; }
 .prose .faq__item h3 { margin: 0 0 .4rem; padding: 0; border: 0; font-size: 1.125rem; line-height: 1.35; color: var(--c-ink); }
 .prose .faq__item p { margin: 0; }
+
+/*
+  AXON PRO – efekty k fotkám
+  v1.1 (2026-11-20)
+    - bannery: menšie zväčšenie (1.025 / 1.035) a parallax ±8 px, aby sa neorezával text pri okraji
+  v1.0 (2026-11-20)
+    - hero dlaždice: pomalý „Ken Burns" pohyb fotky + svetelný prelet pri hoveri
+    - karty: fotka sa pri objavení odkryje (clip + doostrenie), jemný lesk pri hoveri
+    - veľké bannery (AI, bezpečnosť): 3D náklon za myšou s odleskom, parallax pri skrolovaní
+    - postupné (stagger) objavovanie kariet v mriežke
+    - všetko vypnuté pri prefers-reduced-motion
+*/
+
+/* ---------- hero dlaždice ---------- */
+.fx .te-img{animation:fxKen 22s ease-in-out infinite alternate;will-change:transform}
+.fx .te-tile:nth-child(2) .te-img{animation-delay:-6s;animation-direction:alternate-reverse}
+.fx .te-tile:nth-child(3) .te-img{animation-delay:-11s}
+.fx .te-tile:nth-child(4) .te-img{animation-delay:-16s;animation-direction:alternate-reverse}
+.fx .te-tile:hover .te-img{animation-play-state:paused}
+@keyframes fxKen{
+  0%{transform:scale(1.04) translate3d(0,0,0)}
+  100%{transform:scale(1.13) translate3d(-2%,-1.5%,0)}
+}
+
+/* svetelný prelet (hero dlaždice aj karty) */
+.fx .te-tile .fx-sheen,
+.fx .card__media .fx-sheen{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.fx .te-tile .fx-sheen{z-index:-1}
+.fx .fx-sheen::after{content:"";position:absolute;top:-20%;bottom:-20%;left:-60%;width:40%;
+  background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.0) 20%,rgba(255,255,255,.22) 50%,rgba(255,255,255,0) 80%,transparent 100%);
+  transform:skewX(-18deg) translateX(0);opacity:0}
+.fx .te-tile:hover .fx-sheen::after,
+.fx .card:hover .fx-sheen::after{animation:fxSheen 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes fxSheen{0%{opacity:0;transform:skewX(-18deg) translateX(0)}15%{opacity:1}100%{opacity:0;transform:skewX(-18deg) translateX(420%)}}
+
+/* ---------- karty s fotkou ---------- */
+.fx .card__media--photo{position:relative;overflow:hidden}
+.fx .card__media--photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(14,28,43,0) 55%,rgba(14,28,43,.18) 100%);opacity:.7;transition:opacity .5s ease}
+.fx .card:hover .card__media--photo::after{opacity:.35}
+.fx.reveal-on .card.reveal .card__media--photo img{clip-path:inset(0 0 100% 0);filter:blur(6px) saturate(.6);transform:scale(1.12);
+  transition:clip-path 1.1s cubic-bezier(.65,0,.25,1),filter 1.2s ease,transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.fx.reveal-on .card.reveal.is-visible .card__media--photo img{clip-path:inset(0 0 0 0);filter:none;transform:scale(1)}
+.fx.reveal-on .card.reveal.is-visible:hover .card__media--photo img{transform:scale(1.05);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+
+/* stagger v mriežke – oneskorenie dopĺňa effects.js cez --fx-d */
+.fx.reveal-on .reveal{transition-delay:var(--fx-d,0s)}
+.fx.reveal-on .card.reveal .card__media--photo img{transition-delay:calc(var(--fx-d,0s) + .1s)}
+
+/* ---------- veľké bannery: náklon + odlesk + parallax ---------- */
+.fx .feature__media{position:relative;transform-style:preserve-3d;perspective:1200px;
+  transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s ease;will-change:transform}
+.fx .feature__media img{transform:translate3d(0,var(--fx-py,0px),0) scale(1.025);transition:transform .2s linear}
+.fx .feature__media:hover img{transform:translate3d(0,var(--fx-py,0px),0) scale(1.035)}
+.fx .feature__media .fx-glare{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s ease;
+  background:radial-gradient(600px circle at var(--fx-gx,50%) var(--fx-gy,50%),rgba(255,255,255,.16),transparent 45%)}
+.fx .feature__media.is-tilt .fx-glare{opacity:1}
+.fx .feature__media.is-tilt{box-shadow:0 30px 60px -20px rgba(8,18,29,.45)}
+
+/* jemné „dýchanie" svetla na tmavých banneroch */
+.fx .feature__media::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(40% 50% at 30% 55%,rgba(79,216,255,.18),transparent 70%);animation:fxBreath 6s ease-in-out infinite}
+@keyframes fxBreath{0%,100%{opacity:.25}50%{opacity:.8}}
+
+@media (prefers-reduced-motion:reduce){
+  .fx .te-img,.fx .feature__media::before{animation:none}
+  .fx .fx-sheen{display:none}
+  .fx.reveal-on .card.reveal .card__media--photo img{clip-path:none;filter:none;transform:none;transition:none}
+  .fx .feature__media,.fx .feature__media img{transform:none!important;transition:none}
+}
+
+/* lead photo on subpages (photos from the approved preview) – a wide crop of the card photo */
+.lead-figure--photo img { object-position: 50% 45%; filter: saturate(.9) contrast(1.02); }
+.lead-figure--photo::after { background: linear-gradient(90deg, rgba(3, 47, 62, .28), rgba(3, 47, 62, 0) 55%); }
