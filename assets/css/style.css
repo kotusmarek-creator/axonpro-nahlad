@@ -2134,3 +2134,11 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
   .bento--software > .card:last-child { grid-column: auto; }
   .bento--software > .card:first-child .card__media--art { aspect-ratio: auto; height: clamp(160px, 26vw, 220px); }
 }
+
+/* ---------- FAQ section under the AI and security articles (tools/geo.py, content/_faq.json) ---------- */
+.prose .faq { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--c-line); }
+.prose .faq > h2 { margin: 0 0 1.25rem; font-size: var(--fs-h2, 1.75rem); color: var(--c-ink); }
+.prose .faq__item { padding: 1.1rem 1.25rem; border: 1px solid var(--c-line); border-radius: 14px; background: var(--c-surface, #fff); }
+.prose .faq__item + .faq__item { margin-top: .75rem; }
+.prose .faq__item h3 { margin: 0 0 .4rem; padding: 0; border: 0; font-size: 1.125rem; line-height: 1.35; color: var(--c-ink); }
+.prose .faq__item p { margin: 0; }

@@ -1,0 +1,44 @@
+# AXON PRO, s.r.o.
+
+> AXON PRO, s.r.o. je slovenská IT spoločnosť s centrálou v Bratislave a pobočkami v Topoľčanoch, Žiline a Košiciach. V IT pôsobí od roku 1991: vyvíja softvér na mieru a informačné systémy pre štátnu správu aj súkromný sektor, nasadzuje lokálnu umelú inteligenciu na vlastnej infraštruktúre zákazníka, robí audity kybernetickej bezpečnosti a spravuje servery, cloud a linuxové systémy.
+
+Certifikáty: ISO 9001 – systém manažérstva kvality, ISO/IEC 27001 – systém manažérstva informačnej bezpečnosti, ISO 14001 – systém environmentálneho manažérstva; IT služby riadené podľa ISO/IEC 20000.
+
+## Kontakt
+
+- Centrála: AXON PRO, s.r.o., Černyševského 26, 851 01 Bratislava · IČO 31 387 811 · IČ DPH SK2020304440
+- Telefón: +421 2 6241 0360, +421 903 482 611 · E-mail: office@axonpro.sk
+- Pobočka Topoľčany: Čsl. armády 18, 955 01 Topoľčany · +421 38 532 39 09 · OfficeTO@axonpro.sk
+- Pobočka Žilina: Jána Milca 779/13, 010 01 Žilina · +421 903 482 618 · OfficeZA@axonpro.sk
+- Pobočka Košice: Slávičia 7, 040 01 Košice · +421 55 729 85 71 · OfficeKE@axonpro.sk
+
+## Hlavné stránky (slovensky)
+
+- [Úvod](https://www.axonpro.sk/): Vyvíjame. Chránime. Spravujeme. Napíšeme vám softvér na mieru, zavedieme umelú inteligenciu na vašich vlastných serveroch a postaráme sa o bezpečnosť celej siete. Pracujeme pre spoločnosti aj pre štátnu správu.
+- [Umelá inteligencia](https://www.axonpro.sk/software/ai/): Ponúkame vám silu AI agenta v bezpečí vášho lokálneho firemného prostredia.
+- [Kybernetická bezpečnosť](https://www.axonpro.sk/service/security/): Bezpečnostným auditom odhalíme zraniteľnosti, overíme konfigurácie a zabezpečíme účinnú ochranu vašich systémov. Od skúsených špecialistov dostanete…
+- [Softvér](https://www.axonpro.sk/software/): Softvér od AXON PRO: vývoj informačných systémov na mieru, mobilné aplikácie, moderné technológie a lokálna umelá inteligencia na vlastnej infraštruktúre firmy.
+- [Vývoj softvéru](https://www.axonpro.sk/software/devel/): Vo firme AXON PRO vyvíjame softvérové projekty od roku 1994. Zameriavame sa najmä na informačné systémy na mieru zákazníka.
+- [Mobilné aplikácie](https://www.axonpro.sk/software/mobil/): Naše mobilné aplikácie slúžia predovšetkým ako doplnky k veľkým informačným systémom.
+- [Služby](https://www.axonpro.sk/service/): IT služby AXON PRO: audit kybernetickej bezpečnosti, cloud a virtualizácia, Kubernetes, linuxové služby, dodávka hardvéru a servisné riešenia.
+- [Cloud, virtualizácia, Kubernetes](https://www.axonpro.sk/service/cloud/): Pomôžeme vám s virtualizáciou, s rozhodovaním o verejnom cloude aj s inštaláciou a konfiguráciou infraštruktúry.
+- [Linuxové služby](https://www.axonpro.sk/service/linux/): AXON PRO poskytuje služby pre Linux a ďalšie open source produkty. Zabezpečujú ich skúsení odborníci certifikovaní uznávanými autoritami, ako sú Red Hat…
+- [Projekty](https://www.axonpro.sk/project/): Referenčné projekty AXON PRO pre štátnu správu aj súkromný sektor: registre, informačné systémy a aplikácie ako CRHZ, ITMS, EWA, Doris či Slovensko v číslach.
+- [O nás](https://www.axonpro.sk/about/): AXON PRO, s.r.o. – slovenská IT spoločnosť, v IT od roku 1991, s centrálou v Bratislave a pobočkami v Topoľčanoch, Žiline a Košiciach. Stratégia, referencie, kariéra, certifikáty ISO a partneri.
+- [Referencie](https://www.axonpro.sk/about/referencie/): Ministerstvám, štátnym inštitúciám, univerzitám a firmám sme dodávali IT techniku a špecializovaný softvér a budovali sme pre ne siete LAN.
+- [Certifikáty](https://www.axonpro.sk/about/certifikaty/): AXON PRO, s.r.o., má systémy manažérstva kvality, informačnej bezpečnosti a životného prostredia certifikované podľa noriem ISO 9001, ISO 27001 a ISO…
+- [Kariéra](https://www.axonpro.sk/about/kariera/): Momentálne neobsadzujeme žiadne pracovné pozície.
+- [Kontakt](https://www.axonpro.sk/contact/): AXON PRO, s.r.o., Černyševského 26, Bratislava 851 01 · +421 2 6241 0360 · office@axonpro.sk
+
+## Main pages (English)
+
+> AXON PRO, s.r.o. is a Slovak IT company headquartered in Bratislava with branches in Topoľčany, Žilina and Košice. In IT since 1991, it develops custom software and information systems for the public and private sectors, deploys local artificial intelligence on the customer's own infrastructure, carries out cyber security audits and manages servers, cloud and Linux systems.
+
+- [Home](https://www.axonpro.sk/en/): We build. We protect. We manage. We write custom software, run artificial intelligence on your own servers and keep your whole network secure. We work for companies and the public sector alike.
+- [Artificial intelligence](https://www.axonpro.sk/en/software/ai/): We offer you the power of an AI agent within the safety of your local company environment.
+- [Cyber security](https://www.axonpro.sk/en/service/security/): Our security audit uncovers vulnerabilities, verifies your configurations and ensures effective protection for your systems. Our experienced specialists…
+- [Software](https://www.axonpro.sk/en/software/): Software by AXON PRO: custom information systems, mobile apps, modern technologies and local artificial intelligence running on the company's own infrastructure.
+- [Services](https://www.axonpro.sk/en/service/): IT services by AXON PRO: cyber security audits, cloud and virtualization, Kubernetes, Linux services, hardware supply and support services.
+- [Projects](https://www.axonpro.sk/en/project/): AXON PRO reference projects for the public and private sectors: registers, information systems and apps such as CRHZ, ITMS, EWA, Doris and Slovakia in Numbers.
+- [About](https://www.axonpro.sk/en/about/): AXON PRO, s.r.o. – a Slovak IT company in IT since 1991, headquartered in Bratislava with branches in Topoľčany, Žilina and Košice. Strategy, references, careers, ISO certificates and partners.
+- [Contact](https://www.axonpro.sk/en/contact/): AXON PRO, s.r.o., Černyševského 26, Bratislava 851 01 · +421 2 6241 0360 · office@axonpro.sk
