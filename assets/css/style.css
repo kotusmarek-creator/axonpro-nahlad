@@ -2216,3 +2216,12 @@ body::after { left: auto; right: 0; transform: scaleX(-1); background-position: 
 /* lead photo on subpages (photos from the approved preview) – a wide crop of the card photo */
 .lead-figure--photo img { object-position: 50% 45%; filter: saturate(.9) contrast(1.02); }
 .lead-figure--photo::after { background: linear-gradient(90deg, rgba(3, 47, 62, .28), rgba(3, 47, 62, 0) 55%); }
+
+/* Fotodlaždice úvodu: názvy v jednej línii aj keď je popis dvojriadkový (telo má výšku na 2 riadky popisu, obsah hore) */
+@media (min-width: 621px) {
+  .te-body { width: 100%; min-height: calc(40px + 1.2rem * 1.2 + 4px + 2 * .9rem * 1.65); align-content: start; }
+}
+
+/* Úvodný banner s fotkou: vyšší pomer 16:7 na všetkých šírkach (ľudia s rukami ako na karte); výrez = object-position karty z build.py */
+.lead-figure.lead-figure--photo { aspect-ratio: 16 / 7; }
+.lead-figure--photo img { object-position: 50% 40%; }
